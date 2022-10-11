@@ -1,0 +1,10 @@
+gensim version 3.8.0
+
+1.gensim github를 새로 받는다. https://github.com/RaRe-Technologies/gensim
+2. 빌드하는 방법 습득
+
+
+3. 10_10_well 은 resistant 에 대한 negative sampling 이 적용된 실험 파일로 gensim 설치된 폴더에 
+   py 파일과 10_10_well 에 있는 내용을 다 덮어씌워야 실험 적용이 가능
+4. 새로 수정을 한 경우에는 10_10_well의 파일을 gensim github에서 받은 위치에 넣고 빌드를 하면 
+   so 파일이 새로 만들어진다.
