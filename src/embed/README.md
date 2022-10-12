@@ -82,6 +82,10 @@ $ . ./generate_embedding.sh GDSC_TCGA RANS
 
 Trained embedding vectors will be saved into 'RAMP/results/embedding'.
 
-### 3-2. To Use Other Datasets
+To do external validation, the dataset to be validated have to be given as an argument like `BaseDataset_ValDataset`. The example command is shown in the code block above as `GDSC_TCGA`.
 
-To try other datasets, you have to locate the datasets into 'RAMP/data', and modify the `dataset` argument in the 'RAMP/generate_embedding.sh' file to your dataset's directory name.
+To try other datasets, you have to locate the datasets into 'RAMP/data', and just run the script file by replacing GDSC to the new dataset's directory name.
+
+### 3-2. Running without Script
+
+Note that you have to use absolute path for the `data_path` argument. To use relative path, the relativity must be based on the main.py file's location.
