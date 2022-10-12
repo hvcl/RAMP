@@ -154,9 +154,9 @@ class Drug_Response_Predictor(nn.Module):
         
         y_rn = self.rn1(shared_feature)
         skip_rn_feature = y_rn
-        y_sn = nn.functional.dropout(y_sn, training=MCD)
+        y_rn = nn.functional.dropout(y_rn, training=MCD)
         y_rn = self.rn2(y_rn)
-        y_sn = nn.functional.dropout(y_sn, training=MCD)
+        y_rn = nn.functional.dropout(y_rn, training=MCD)
         y_rn = self.rn3(y_rn)
         
         return torch.cat([torch.unsqueeze(y_sn, 2), torch.unsqueeze(y_rn,2)], dim=2), torch.cat([shared_feature, skip_sn_feature, skip_rn_feature], dim=1)
