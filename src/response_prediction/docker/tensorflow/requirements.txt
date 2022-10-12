@@ -1,0 +1,35 @@
+# Default
+numpy
+scipy
+tqdm
+h5py
+hdf5storage
+sklearn 
+
+# Image
+Pillow
+opencv-python
+scikit-image
+scikit-learn
+albumentations
+libtiff
+einops
+
+# Visualization
+seaborn
+matplotlib
+
+# Jupyter Notebook
+jupyterlab
+ipywidgets
+widgetsnbextension
+
+# Utils
+setproctitle
+hydra
+natsort
+nd2reader
+imblearn
+wandb
+statannot
+tensorflow-addons
