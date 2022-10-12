@@ -17,7 +17,7 @@ cd docker/pytorch
 ```
 
 # Quick Test
-- You should ensure that the abosulte path have to be modified to your environment path in demo_tf.py and demo_torch.py
+- You should ensure that a global "PATH" variable have to be modified to your environment path in demo_tf.py and demo_torch.py
 
 - All experiments in the manuscript were done in Tensorflow.
 ```
