@@ -71,9 +71,11 @@ def multi_task_prediction(train_data, train_label, test_data, alpha, dp_rate, ig
             data = next(train_generator)
             model.set_input(data)
             model.optimize_parameters()
-        losses = model.get_current_losses()
-        for i, key in enumerate(losses):
-            total_loss[key] += losses[key].detach().cpu().numpy()
+            losses = model.get_current_losses()
+            for i, key in enumerate(losses):
+                total_loss[key] += losses[key].detach().cpu().numpy()
+        for key in total_loss:
+            total_loss[key] /= args["iter"]
         pbar.set_postfix(total_loss)
             
     model.eval()
