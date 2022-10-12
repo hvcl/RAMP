@@ -180,6 +180,7 @@ if __name__ == '__main__':
     Inner_fold = 10
     search_alpha_list = [10.0, 15.0, 20.0, 25.0, 30.0] # Average alpha instead of search list
     search_dp_rate_list = [0.1, 0.2, 0.3, 0.4, 0.5] # Average dp rate instead of search list
+    #search_epoch_list = [400, 500, 600] 
     embedding_type = "rans"
     
     for k in range(0,Outer_fold): 
