@@ -195,19 +195,6 @@ if __name__ == '__main__':
         best_dp_rate_list.append(best_dp_rate)
         final_predict[test_index] = predict
     
-    result = np.zeros([981,265], dtype=np.int32)
-    for i in range(0, 265):
-        for j in range(0, 981):
-            if final_predict[j,i,1] >= final_predict[j,i,0]:
-                result[j,i] = 1
-            else:
-                result[j,i] = 0
-
-    output = get_performance(label[:,:,1], final_predict[:,:,1], result, ignore_idx)
-    print(np.sum(output[0])/265)
-    print(np.sum(output[1])/265)
-    print(np.sum(output[2])/265)
-    print(np.sum(output[5])/265)
     
     scipy.io.savemat(PATH + "/results/predictions/RAMP.mat", {"GDSC_data":data, "label":label, "pred":final_predict, "alpha":best_alpha_list, "dp":best_dp_rate_list})
         
