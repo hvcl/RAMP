@@ -9,10 +9,10 @@ This is an official implementation of "RAMP: Response-Aware Multi-task Learning 
 
 - Choose your environment either tensorflow or pytorch. 
 ```
-cd docker/tensorflow
+cd src/response_prediction/docker/tensorflow
 ./build.sh 
 or
-cd docker/pytorch
+cd src/response_prediction/docker/pytorch
 ./build.sh 
 ```
 
