@@ -3,9 +3,9 @@ This is an official implementation of "RAMP: Response-Aware Multi-task Learning 
 
 
 ## **Environment Setup** ##
-The environment settings for RA-NS are described in [here](src/embed/README.md).
+- The environment settings for RA-NS are described in [here](src/embed/README.md).
 
-Building docker images to test 10-fold nested cross validation using extracted embedding vectors.
+- Building docker images to test 10-fold nested cross validation using extracted embedding vectors.
 ```
 cd docker/tensorflow
 ./build.sh 
@@ -14,10 +14,10 @@ cd docker/pytorch
 ./build.sh 
 ```
 
-# Quick test
+# Quick Test
+You should ensure that the abosulte path have to be modified to your environment path in demo_tf.py and demo_torch.py
+After that, choose your environment either tensorflow or pytorch. All experiments in the manuscript were done in Tensorflow.
 ```
 cd src/response_prediction/scripts
-./demo_tf.sh or ./demo_torch.sh # Choose your environment either tensorflow or pytorch. All experiments in the manuscript were done in Tensorflow.
+./demo_tf.sh or ./demo_torch.sh 
 ```
-
-#
