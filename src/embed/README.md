@@ -64,9 +64,9 @@ $ cp *.so [lib_path]/gensim/models
 
 ## 3. Train Embedding Vectors
 
-### 3-1. To Use GDSC or TCGA Datasets
+### 3-1. Train with GDSC Dataset
 
-To test the module with our datasets, just folow the commands below.
+To test the module with our dataset, just folow the commands below from the project root(`path_to_RAMP/.`).
 
 ```
 $ cd scripts
@@ -76,13 +76,13 @@ $ . ./generate_embedding.sh GDSC
 # Train GDSC embedding vectors with RA-NS
 $ . ./generate_embedding.sh GDSC RANS
 
-# Train TCGA embedding vectors with RA-NS via External Validation 
-$ . ./generate_embedding.sh GDSC_TCGA RANS
+# [External Validation] Train (Other-dataset) embedding vectors with RA-NS, based on GDSC
+$ . ./generate_embedding.sh GDSC_(Other-dataset) RANS
 ```
 
 Trained embedding vectors will be saved into 'RAMP/results/embedding'.
 
-To do external validation, the dataset to be validated have to be given as an argument like `BaseDataset_ValDataset`. The example command is shown in the code block above as `GDSC_TCGA`.
+To do external validation, the dataset to be validated have to be given as an argument like `BaseDataset_ValDataset`. The example command is shown in the code block above as `GDSC_(Other-dataset)`.
 
 To try other datasets, you have to locate the datasets into 'RAMP/data', and just run the script file by replacing GDSC to the new dataset's directory name.
 
