@@ -136,7 +136,7 @@ if __name__ == '__main__':
     n_channels = 64
     Outer_fold = 10
     Inner_fold = 10
-    search_alpha_list = [10.0, 15.0, 20.0, 25.0, 30.0] # Average alpha instead of search list
+    search_alpha_list = [1.0, 2.0, 5.0, 10.0, 15.0, 20.0, 25.0, 30.0] # Average alpha instead of search list
     search_dp_rate_list = [0.1, 0.2, 0.3, 0.4, 0.5] # Average dp rate instead of search list
     embedding_type = "rans"
     
