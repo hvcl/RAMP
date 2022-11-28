@@ -28,7 +28,7 @@ class Drug_Response_Predictor(keras.Model):
         self.h4_2 = layers.Dense(ndrugs, activation=None)
         self.alpha = alpha
         self.dp_rate = dp_rate
-        self.ce = tf.keras.losses.BinaryCrossentropy(from_logits=False)
+        self.ce = tf.keras.losses.BinaryCrossentropy(from_logits=True)
         self.loss_tracker = keras.metrics.Mean(name="loss")
         self.loss_tracker.reset_states()
 
