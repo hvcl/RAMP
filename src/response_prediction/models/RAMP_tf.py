@@ -64,8 +64,8 @@ class Drug_Response_Predictor(keras.Model):
             logits = tf.linalg.matmul(features_normalized, tf.transpose(features_normalized))
             y_true = tf.linalg.matmul(label,label, transpose_b=True, a_is_sparse=True, b_is_sparse=True)
             y_true /= 265
-            #contrastive_loss = self.alpha*tf.math.reduce_mean(-y_true*tf.math.log(logits))
-            contrastive_loss = self.alpha*self.ce(y_ture, logits)
+            contrastive_loss = self.alpha*tf.math.reduce_mean(-y_true*tf.math.log(logits))
+            #contrastive_loss = self.alpha*self.ce(y_ture, logits)
             ce_loss = tf.reduce_mean(mask*tf.nn.sigmoid_cross_entropy_with_logits(label, out))
             loss = ce_loss + contrastive_loss
         gradients = tape.gradient(loss, self.trainable_variables)
