@@ -52,7 +52,8 @@ class Trainer():
         ## Calculate Feature Similarity Matrix
         normalized_feature = nn.functional.normalize(self.features, p=2.0, dim=1)
         feature_similarity = torch.matmul(normalized_feature, torch.transpose(normalized_feature,1,0))
-        self.SSCR = self.alpha*torch.mean(-label_similarity*torch.log(feature_similarity))
+        #self.SSCR = self.alpha*torch.mean(-label_similarity*torch.log(feature_similarity))
+        self.SSCR = self.alpha*F.binary_cross_entropy(feature_similarity, label_similarity)
         self.Total_Loss = self.CELoss + self.SSCR
         self.Total_Loss.backward()
 
