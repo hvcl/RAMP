@@ -26,7 +26,7 @@ class Trainer():
         self.F = Drug_Response_Predictor(self.in_ch, self.nparameter, self.ndrugs, self.dp_rate)
         self.F.to(self.device)
 
-        self.loss = torch.nn.BCELoss(size_average=True, reduction='mean')
+        #self.loss = torch.nn.BCELoss(size_average=True, reduction='mean')
         self.optimizer_G = torch.optim.RAdam(itertools.chain(self.F.parameters()), 
                                              lr=args["lr"], betas=(0.9, 0.999)
         )
